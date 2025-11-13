@@ -6,6 +6,9 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.monitor import Monitor
 from callback import *
 import os
+import sys
+import stable_baselines3
+
 
 # Initialize wandb
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

@@ -5,13 +5,17 @@ from env import *
 from custom_CNN import *
 from stable_baselines3 import PPO
 from callback import *
+import argparse
 
 action = 0
 dur_frame = 0
-load_model_name = 'case2_25M'
+parser = argparse.ArgumentParser()
+parser.add_argument("--model_path", type=str, default='./model/case2_25M', help="Path to the trained model (.zip)")
+args = parser.parse_args()
+model_path = args.model_path
 window = pyglet.window.Window(screen_width, screen_height, "Sand Tetris")
 env = SandTetrisEnv()
-model = PPO.load(f"./model/{load_model_name}", env=env)
+model = PPO.load(model_path, env=env)
 
 @window.event
 def on_draw():

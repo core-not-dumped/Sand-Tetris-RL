@@ -36,7 +36,7 @@ block_falling_spd = -1
 block_x_spd = 1
 block_color_list = [GREEN, RED, BLUE]
 num_type = len(block_color_list)
-channel_num = len(block_color_list) + 1
+channel_num = len(block_color_list)
 # first (0, 0) is standard of the rotation
 block_coor_list = [
     [[[0, 0], [-1, 0], [1, 0], [2, 0]], [[0, 0], [0, 1], [0, -1], [0, -2]]],\
